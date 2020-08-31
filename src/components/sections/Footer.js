@@ -6,22 +6,34 @@ import Img from 'gatsby-image';
 import { Container } from '@components/global';
 import ExternalLink from '@common/ExternalLink';
 
-import GithubIcon from '@static/icons/github.svg';
+
 import InstagramIcon from '@static/icons/instagram.svg';
 import TwitterIcon from '@static/icons/twitter.svg';
+import LinkedIn from '@static/icons/linkedin.svg';
+import SpotifyIcon from '@static/icons/spotify.svg';
+import GithubIcon from '@static/icons/github.svg';
+
 
 const SOCIAL = [
   {
-    icon: GithubIcon,
-    link: 'https://github.com/ajayns/gatsby-absurd',
+    icon: LinkedIn,
+    link: 'https://www.linkedin.com/company/ucr-women-in-computing/',
   },
   {
     icon: InstagramIcon,
-    link: 'https://instagram.com/ajay_ns',
+    link: 'https://instagram.com/wincucr',
   },
   {
     icon: TwitterIcon,
-    link: 'https://twitter.com/ajayns08',
+    link: 'https://twitter.com/wincucr',
+  },
+  {
+    icon: SpotifyIcon,
+    link: 'https://twitter.com/wincucr',
+  },
+  {
+    icon: GithubIcon,
+    link: 'https://github.com/winc-ucr',
   },
 ];
 
@@ -31,7 +43,7 @@ const Footer = () => (
       query {
         art_pot: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "customers_pot" }
+          name: { eq: "ideas" }
         ) {
           childImageSharp {
             fluid(maxWidth: 960) {
@@ -52,12 +64,12 @@ const Footer = () => (
         <FooterWrapper>
           <StyledContainer>
             <Copyright>
-              <h2>Absurd</h2>
+              <h2>WINC</h2>
               <span>
-                Illustrations by
+                Email us
                 {` `}
-                <ExternalLink href="https://twitter.com/diana_valeanu">
-                  @diana_valeanu
+                <ExternalLink href="mailto:wincucr@gmail.com">
+                  wincucr@gmail.com
                 </ExternalLink>
               </span>
             </Copyright>

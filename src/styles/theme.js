@@ -1,10 +1,10 @@
 const theme = {
   font: {
-    primary: `'Prata', serif`,
-    secondary: `'Average', serif`,
+    primary: `'Futura', serif`,
+    secondary: `'Lato', serif`,
   },
   font_size: {
-    small: 'font-size: 20px; line-height: 30px',
+    small: 'font-size: 20px; line-height: 26px',
     regular: 'font-size: 24px; line-height: 32px',
     large: 'font-size: 30px; line-height: 40px',
     larger: 'font-size: 36px; line-height: 48px',
@@ -20,7 +20,7 @@ const theme = {
       light: '#564F62',
       regular: '#211E26',
     },
-    primary: '#8bd8ed',
+    primary: '#f57567',
   },
   screen: {
     xs: '575px',

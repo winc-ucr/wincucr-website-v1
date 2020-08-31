@@ -46,14 +46,13 @@ const About = () => (
     render={data => (
       <Section id="about">
         <Container>
+          <h1> About</h1>
           <Grid>
             <div>
-              <h2>Speed past the competition</h2>
+              <h2>Empowering Women in Tech</h2>
               <p>
-                Gatsby.js builds the fastest possible website. Instead of
-                waiting to generate pages when requested, pre-build pages and
-                lift them into a global cloud of servers — ready to be delivered
-                instantly to your users wherever they are.
+                We're dedicated to empowering and supporting a network of leading women in tech 
+                at the University of California, Riverside. We're UCR Women in Computing.
               </p>
             </div>
             <Art>
@@ -65,15 +64,16 @@ const About = () => (
               <Img fluid={data.art_learn.childImageSharp.fluid} />
             </Art>
             <div>
-              <h2>Nothing new to learn here</h2>
-              <p>
-                Enjoy the power of the latest web technologies – React.js ,
-                Webpack , modern JavaScript and CSS and more — all set up and
-                waiting for you to start building.
+              <h2>Grow and thrive - academically, professionally, and personally.</h2>
+              <p> 
+              From mentorship, professional development workshops, and social events, 
+              we aim to offer all the opportunities and resources necessary for success within our 
+              incredible and diverse community of women technologists here at the 
+              University of California, Riverside.
               </p>
             </div>
           </Grid>
-          <Grid>
+          {/* <Grid>
             <div>
               <h2>Grow and build your ideas</h2>
               <p>
@@ -84,10 +84,11 @@ const About = () => (
                 Gatsby is fast in every way that matters.
               </p>
             </div>
+
             <Art>
               <Img fluid={data.art_ideas.childImageSharp.fluid} />
             </Art>
-          </Grid>
+          </Grid> */}
         </Container>
       </Section>
     )}

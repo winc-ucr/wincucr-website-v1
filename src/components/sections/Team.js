@@ -7,34 +7,59 @@ import { Section, Container } from '@components/global';
 
 const TEAM = [
   {
-    name: 'Josh Peck',
-    image: 'josh.jpg',
-    role: 'Founder',
+    name: 'Anchita Bora',
+    image: 'anchita.jpg',
+    role: 'President',
   },
   {
-    name: 'Lisa Haydon',
+    name: 'Ruth Hwang',
     image: 'lisa.jpg',
-    role: 'Art Director',
+    role: 'Vice President',
   },
   {
-    name: 'Ashlyn Harris',
-    image: 'ashlyn.jpg',
-    role: 'Frontend Engineer',
+    name: 'Lauren Flemmer',
+    image: 'lauren.jpg',
+    role: 'Treasurer',
   },
   {
-    name: 'Todd Joseph',
-    image: 'todd.jpg',
-    role: 'Designer',
-  },
-  {
-    name: 'Martin White',
-    image: 'martin.jpg',
-    role: 'Backend Engineer',
-  },
-  {
-    name: 'Rose Leslie',
-    image: 'rose.jpg',
+    name: 'Keila Braden',
+    image: 'keila.JPG',
     role: 'Marketing',
+  },
+  {
+    name: 'Cristina Lawson',
+    image: 'cristina.jpg',
+    role: 'Technical Development',
+  },
+  {
+    name: 'Megan McDaniel',
+    image: 'megan.jpg',
+    role: 'External Ops',
+  },
+  {
+    name: 'Paris Hom',
+    image: 'paris.jpg',
+    role: 'External Ops',
+  },
+  {
+    name: 'Jeana Tijerina',
+    image: 'jeana.jpg',
+    role: 'Internal Ops',
+  },
+  {
+    name: 'Dhruvi Faria',
+    image: 'dhruvi.jpg',
+    role: 'Membership',
+  },
+  {
+    name: 'Puloma Katiyar',
+    image: 'puloma.jpg',
+    role: 'Membership',
+  },
+  {
+    name: 'Van Truong',
+    image: 'van.jpg',
+    role: 'Webmaster',
   },
 ];
 
@@ -125,7 +150,7 @@ const Art = styled.figure`
   margin: -80px 0;
   position: absolute;
   top: 0;
-  left: 70%;
+  left: 50%;
 
   @media (max-width: ${props => props.theme.screen.lg}) {
     top: 20%;
