@@ -23,21 +23,16 @@ const TEAM = [
   },
   {
     name: 'Keila Braden',
-    image: 'keila.JPG',
+    image: 'keila.jpg',
     role: 'Marketing',
   },
   {
-    name: 'Cristina Lawson',
-    image: 'cristina.jpg',
-    role: 'Technical Development',
-  },
-  {
-    name: 'Megan McDaniel',
+    name: 'Megan',
     image: 'megan.jpg',
     role: 'External Ops',
   },
   {
-    name: 'Paris Hom',
+    name: 'Paris',
     image: 'paris.jpg',
     role: 'External Ops',
   },
@@ -52,15 +47,21 @@ const TEAM = [
     role: 'Membership',
   },
   {
-    name: 'Puloma Katiyar',
+    name: 'Puloma',
     image: 'puloma.jpg',
     role: 'Membership',
   },
   {
-    name: 'Van Truong',
-    image: 'van.jpg',
-    role: 'Webmaster',
+    name: 'Cristina',
+    image: 'cristina.jpg',
+    role: 'Professional Development',
   },
+  {
+    name: 'Van',
+    image: 'van.jpg',
+    role: 'Webmaster ',
+  },
+  
 ];
 
 const Team = () => (
@@ -150,7 +151,7 @@ const Art = styled.figure`
   margin: -80px 0;
   position: absolute;
   top: 0;
-  left: 50%;
+  left: 70%;
 
   @media (max-width: ${props => props.theme.screen.lg}) {
     top: 20%;
