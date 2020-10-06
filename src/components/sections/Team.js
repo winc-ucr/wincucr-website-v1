@@ -13,7 +13,12 @@ const TEAM = [
   },
   {
     name: 'Ruth Hwang',
-    image: 'lisa.jpg',
+    image: 'ruth.jpg',
+    role: 'Vice President',
+  },
+  {
+    name: 'Pamodya Peiris',
+    image: 'pam.jpg',
     role: 'Vice President',
   },
   {
@@ -57,10 +62,21 @@ const TEAM = [
     role: 'Professional Development',
   },
   {
-    name: 'Van',
+    name: 'Van Truong',
     image: 'van.jpg',
-    role: 'Webmaster ',
+    role: 'Webmaster',
   },
+  {
+    name: 'Divyanshi Srivastava',
+    image: 'Divyanshi.jpg',
+    role: 'Graduate Outreach',
+  },
+  {
+    name: 'Audrey Der',
+    image: 'audrey.jpg',
+    role: 'Graduate Outreach',
+  },
+  
   
 ];
 
