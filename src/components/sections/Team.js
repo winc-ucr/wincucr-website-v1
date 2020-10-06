@@ -129,7 +129,7 @@ const TeamGrid = styled.div`
   grid-template-rows: min-content;
   grid-gap: 50px;
   justify-content: space-between;
-  width: 60%;
+  width: 100%;
   margin-top: 72px;
 
   @media (max-width: ${props => props.theme.screen.lg}) {

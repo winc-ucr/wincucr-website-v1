@@ -29,7 +29,7 @@ const SOCIAL = [
   },
   {
     icon: SpotifyIcon,
-    link: 'https://twitter.com/wincucr',
+    link: 'https://open.spotify.com/show/7fCem3M3voES6Ceqk9wNcj?si=tLfONE2mTVWLhfIgnAbuGA',
   },
   {
     icon: GithubIcon,
@@ -43,7 +43,7 @@ const Footer = () => (
       query {
         art_pot: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "ideas" }
+          name: { eq: "Designer girl-pana (bottom)" }
         ) {
           childImageSharp {
             fluid(maxWidth: 960) {
@@ -58,7 +58,7 @@ const Footer = () => (
         <Art>
           <Img
             fluid={data.art_pot.childImageSharp.fluid}
-            style={{ width: 480, maxWidth: '100%', marginBottom: -16 }}
+            style={{ width: 880, maxWidth: '100%', marginTop: -200, marginBottom: -50 }}
           />
         </Art>
         <FooterWrapper>
@@ -96,7 +96,7 @@ const SocialIcons = styled.div`
     height: 24px;
   }
 
-  @media (max-width: ${props => props.theme.screen.sm}) {
+  @media (max-width: ${props => props.theme.screen.md}) {
     margin-top: 40px;
   }
 `;

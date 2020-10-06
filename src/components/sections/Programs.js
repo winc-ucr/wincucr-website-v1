@@ -78,7 +78,7 @@ const Programs = () => (
 
         art_ideas: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "ideas" }
+          name: { eq: "Version control-pana (prof dev)" }
         ) {
           childImageSharp {
             fluid(maxWidth: 760) {
