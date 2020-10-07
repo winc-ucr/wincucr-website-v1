@@ -10,7 +10,7 @@ const FAQS = [
     title: 'When are general meetings?',
     content: () => (
       <>
-        Our meetings are on this day at this time on odd weeks.
+        Our meetings are on Wednesday 5-6pm on odd weeks.
       </>
     ),
   },
@@ -35,7 +35,7 @@ const FAQS = [
     content: () => (
       <>
         Please fill out our 
-        <ExternalLink href="https://jamstack.org/"> sponsor interest form </ExternalLink>
+        <ExternalLink href="https://forms.gle/38DaZnEhxqzinFxW7"> sponsor interest form </ExternalLink>
          and we will send you our packet
       </>
     ),

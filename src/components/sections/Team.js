@@ -19,7 +19,7 @@ const TEAM = [
   {
     name: 'Pamodya Peiris',
     image: 'pam.jpg',
-    role: 'Vice President',
+    role: 'Secretary',
   },
   {
     name: 'Lauren Flemmer',
@@ -32,12 +32,12 @@ const TEAM = [
     role: 'Marketing',
   },
   {
-    name: 'Megan',
+    name: 'Megan McDaniel',
     image: 'megan.jpg',
     role: 'External Ops',
   },
   {
-    name: 'Paris',
+    name: 'Paris Hom',
     image: 'paris.jpg',
     role: 'External Ops',
   },
@@ -52,12 +52,12 @@ const TEAM = [
     role: 'Membership',
   },
   {
-    name: 'Puloma',
+    name: 'Puloma Katiyar',
     image: 'puloma.jpg',
     role: 'Membership',
   },
   {
-    name: 'Cristina',
+    name: 'Cristina Lawson',
     image: 'cristina.jpg',
     role: 'Professional Development',
   },
