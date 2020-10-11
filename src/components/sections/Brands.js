@@ -69,9 +69,6 @@ const UsedBy = () => (
               ))}
             </LogoGrid>
           </div>
-          <Art>
-            <Img fluid={data.art_story.childImageSharp.fluid} />
-          </Art>
         </StyledContainer>
       </Section>
     )}
