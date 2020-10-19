@@ -7,7 +7,7 @@ import { Section, Container } from '@components/global';
 
 const SPONSORS = [
   {
-    image: 'balsamiq.jpg',
+    image: 'balsamiq-logo-screen.png',
   },
   
 ];
@@ -21,7 +21,7 @@ const Sponsors = () => (
             node {
               relativePath
               childImageSharp {
-                fluid(maxWidth: 400, maxHeight: 400) {
+                fluid(quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -71,7 +71,7 @@ const Sponsors = () => (
 
 const SponsorsGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, 200px);
+  grid-template-columns: repeat(auto-fill, 300px);
   grid-template-rows: min-content;
   grid-gap: 50px;
   justify-content: space-between;
