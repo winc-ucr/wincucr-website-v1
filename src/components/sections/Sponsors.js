@@ -16,7 +16,7 @@ const Sponsors = () => (
   <StaticQuery
     query={graphql`
       query {
-        allFile(filter: { sourceInstanceName: { eq: "team" } }) {
+        allFile(filter: { sourceInstanceName: { eq: "sponsors" } }) {
           edges {
             node {
               relativePath
