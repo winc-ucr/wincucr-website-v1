@@ -132,7 +132,7 @@ const Programs = () => (
           </Grid>
           <Grid>
             <div>
-              <h2>Profession & Technical Developmnent</h2>
+              <h2>Profession & Technical Development</h2>
               <p>
                 Our workshops prepare you to break into tech. From coding interviews to building an online presence,
                 we teach you what our network of members learned when they worked in industry.
