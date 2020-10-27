@@ -8,7 +8,8 @@ import { Section, Container } from '@components/global';
 
 const SPONSORS = [
   {
-    image: 'balsamiq-logo-screen.png',
+    logo: 'balsamiq-logo-screen.png',
+    link: 'https://balsamiq.com',
   },
   
 ];
@@ -46,14 +47,16 @@ const Sponsors = () => (
         <Container style={{ position: 'relative' }}>
           <h1>Sponsors</h1>
           <SponsorsGrid>
-            {SPONSORS.map(({image}) => {
+            {SPONSORS.map(({logo, link}) => {
               const img = data.allFile.edges.find(
-                ({ node }) => node.relativePath === image
+                ({ node }) => node.relativePath === logo
               ).node;
 
               return (
                 <div>
-                  <Img fluid={img.childImageSharp.fluid}/>
+                  <ExternalLink key={link} href={link}>
+                    <Img fluid={img.childImageSharp.fluid}/>
+                  </ExternalLink>
                 </div>
               );
             })}
