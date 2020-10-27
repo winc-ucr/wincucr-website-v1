@@ -12,6 +12,7 @@ import TwitterIcon from '@static/icons/twitter.svg';
 import LinkedIn from '@static/icons/linkedin.svg';
 import SpotifyIcon from '@static/icons/spotify.svg';
 import GithubIcon from '@static/icons/github.svg';
+import YouTubeIcon from '@static/icons/youtube.svg'
 
 
 const SOCIAL = [
@@ -35,6 +36,10 @@ const SOCIAL = [
     icon: GithubIcon,
     link: 'https://github.com/winc-ucr',
   },
+  {
+    icon: YouTubeIcon,
+    link: 'https://www.youtube.com/channel/UCpg9Xu-WaFM3KRN35f6hPNA',
+  }
 ];
 
 const Footer = () => (

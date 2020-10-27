@@ -137,6 +137,13 @@ const Programs = () => (
                 Our workshops prepare you to break into tech. From coding interviews to building an online presence,
                 we teach you what our network of members learned when they worked in industry.
               </p>
+              <br/>
+              <br/>
+              <p>
+                <StyledExternalLink href="https://www.youtube.com/channel/UCpg9Xu-WaFM3KRN35f6hPNA">
+                  Checkout our YouTube &nbsp;&#x2794;
+                </StyledExternalLink>
+              </p>
             </div>
             <Art>
               <Img fluid={data.art_ideas.childImageSharp.fluid} />
