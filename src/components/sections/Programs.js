@@ -127,7 +127,7 @@ const Programs = () => (
                 <br/>
                 <br/>
                 <p>
-                  Intern applications now open! Closes Friday, November 13th @11:59PM.
+                  Intern applications now open! Closes Friday, November 13th @ 11:59PM.
                   <br/>
                   <br/>
                 </p>
