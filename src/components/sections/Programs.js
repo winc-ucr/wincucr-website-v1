@@ -96,19 +96,19 @@ const Programs = () => (
             <div>
               <h2>Mentorship</h2>
               <p>
-              A yearlong program focused on helping undergraduate students learn from their peers about academics, 
-              company interviews, research, internships and much more. 
-              <br/>
-              <br/>
-               This program pairs over 30+ mentors and mentees, allowing them to hone their interpersonal and technical skills. 
-               We offer mentorship-exclusive events every quarter to help build these connections.
-               <br/>
-               <br/>
-               <p>
-                <StyledExternalLink href="https://linktr.ee/winc_ucr">
-                  Join the program &nbsp;&#x2794;
-                </StyledExternalLink>
-              </p>
+                A yearlong program focused on helping undergraduate students learn from their peers about academics, 
+                company interviews, research, internships and much more. 
+                <br/>
+                <br/>
+                This program pairs over 30+ mentors and mentees, allowing them to hone their interpersonal and technical skills. 
+                We offer mentorship-exclusive events every quarter to help build these connections.
+                <br/>
+                <br/>
+                <p>
+                  <StyledExternalLink href="https://linktr.ee/winc_ucr">
+                    Join the program &nbsp;&#x2794;
+                  </StyledExternalLink>
+                </p>
               </p>
             </div>
             <Art>
@@ -122,11 +122,18 @@ const Programs = () => (
             <div>
               <h2>Intern Program</h2>
               <p> 
-              Learn what it takes to support the community of women in tech at UCR by working closely with our executive board. Past interns
-              have worked on building our website, ideating workshops, and design.
-              <br/>
-              <br/>
-              Intern applications will go live on October 31st, 2020.
+                Learn what it takes to support the community of women in tech at UCR by working closely with our executive board. Past interns
+                have worked on building our website, ideating workshops, and design.
+                <br/>
+                <br/>
+                <p>
+                  Intern applications now open! Closes Friday, November 13th @11:59PM.
+                  <br/>
+                  <br/>
+                </p>
+                <StyledExternalLink href="https://forms.gle/F1Zkp6U6wzKiiWeF7">
+                  Apply now &nbsp;&#x2794;
+                </StyledExternalLink>
               </p>
             </div>
           </Grid>
@@ -157,17 +164,17 @@ const Programs = () => (
             <div>
               <h2>Conversations</h2>
               <p> 
-              Let's Talk Circles, where our community comes together to discuss future projects, 
-              mental health, obstacles and successful achievements we have had.
-             <br/>
-             <br/>
-             Our podcast, "Women in Conversations" catches up with WINC alumni on their newest endevours, advice, and
-             stories navigating the tech industry. Listen on Spotify, Apple Podcasts, or Soundcloud.
-             <br/>
-             <br/>
-             <StyledExternalLink href="https://linktr.ee/winc_ucr">
-                  Listen now &nbsp;&#x2794;
-                </StyledExternalLink>
+                Let's Talk Circles, where our community comes together to discuss future projects, 
+                mental health, obstacles and successful achievements we have had.
+              <br/>
+              <br/>
+              Our podcast, "Women in Conversations" catches up with WINC alumni on their newest endevours, advice, and
+              stories navigating the tech industry. Listen on Spotify, Apple Podcasts, or Soundcloud.
+              <br/>
+              <br/>
+              <StyledExternalLink href="https://linktr.ee/winc_ucr">
+                Listen now &nbsp;&#x2794;
+              </StyledExternalLink>
               </p>
             </div>
           </Grid>
