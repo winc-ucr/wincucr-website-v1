@@ -126,14 +126,7 @@ const Programs = () => (
                 have worked on building our website, ideating workshops, and design.
                 <br/>
                 <br/>
-                <p>
-                  Intern applications now open! Closes Friday, November 13th @ 11:59PM.
-                  <br/>
-                  <br/>
-                </p>
-                <StyledExternalLink href="https://forms.gle/F1Zkp6U6wzKiiWeF7">
-                  Apply now &nbsp;&#x2794;
-                </StyledExternalLink>
+                Intern application closed on November 13 @ 11:59pm.
               </p>
             </div>
           </Grid>
@@ -166,15 +159,15 @@ const Programs = () => (
               <p> 
                 Let's Talk Circles, where our community comes together to discuss future projects, 
                 mental health, obstacles and successful achievements we have had.
-              <br/>
-              <br/>
-              Our podcast, "Women in Conversations" catches up with WINC alumni on their newest endevours, advice, and
-              stories navigating the tech industry. Listen on Spotify, Apple Podcasts, or Soundcloud.
-              <br/>
-              <br/>
-              <StyledExternalLink href="https://linktr.ee/winc_ucr">
-                Listen now &nbsp;&#x2794;
-              </StyledExternalLink>
+                <br/>
+                <br/>
+                Our podcast, "Women in Conversations" catches up with WINC alumni on their newest endevours, advice, and
+                stories navigating the tech industry. Listen on Spotify, Apple Podcasts, or Soundcloud.
+                <br/>
+                <br/>
+                <StyledExternalLink href="https://linktr.ee/winc_ucr">
+                  Listen now &nbsp;&#x2794;
+                </StyledExternalLink>
               </p>
             </div>
           </Grid>
