@@ -12,7 +12,8 @@ import TwitterIcon from '@static/icons/twitter.svg';
 import LinkedIn from '@static/icons/linkedin.svg';
 import SpotifyIcon from '@static/icons/spotify.svg';
 import GithubIcon from '@static/icons/github.svg';
-import YouTubeIcon from '@static/icons/youtube.svg'
+import YouTubeIcon from '@static/icons/youtube.svg';
+import CalendarIcon from '@static/icons/calendar.svg';
 
 
 const SOCIAL = [
@@ -39,6 +40,10 @@ const SOCIAL = [
   {
     icon: YouTubeIcon,
     link: 'https://www.youtube.com/channel/UCpg9Xu-WaFM3KRN35f6hPNA',
+  },
+  {
+    icon: CalendarIcon,
+    link: 'https://calendar.google.com/calendar/embed?src=wincucr%40gmail.com&ctz=America%2FLos_Angeles',
   }
 ];
 
