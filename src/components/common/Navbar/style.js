@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 
 import { Container } from '@components/global';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+
+
+export const StyledAnchorLink =  styled(AnchorLink)`
+
+`;
 
 export const Nav = styled.nav`
   padding: 16px 0;
@@ -48,6 +54,12 @@ export const NavItem = styled.li`
     text-decoration: none;
     opacity: 0.7;
     color: ${props => props.theme.color.black.regular};
+    transition: opacity .2s;
+  }
+
+  a:hover{
+    opacity: 1;
+    transition: opacity .3s ease-in;
   }
 
   &.active {
