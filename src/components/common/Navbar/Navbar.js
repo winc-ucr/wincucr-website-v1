@@ -15,19 +15,12 @@ import {
 
 import { ReactComponent as MenuIcon } from '@static/icons/menu.svg';
 
-const NAV_ITEMS = ['About', 'Programs', 'Team', 'Sponsors', 'FAQ'];
+const NAV_ITEMS = ['About', 'Programs', 'Team', 'Sponsors', 'Contact Us','FAQ',];
 
 class Navbar extends Component {
   state = {
     mobileMenuOpen: false,
-    hoverAnchorLink: false,
   };
-
-  toggleHoverAnchorLink = () =>{
-    this.setState(prevState => ({hoverAnchorLink: !prevState.hoverAnchorLink}));
-    console.log(this.state.hoverAnchorLink);
-  };
-
 
   toggleMobileMenu = () => {
     this.setState(prevState => ({ mobileMenuOpen: !prevState.mobileMenuOpen }));
@@ -40,8 +33,9 @@ class Navbar extends Component {
   };
 
   getNavAnchorLink = item => (
-    <StyledAnchorLink style={{}} onMouseEnter={this.toggleHoverAnchorLink} onMouseLeave={this.toggleHoverAnchorLink} href={`#${item.toLowerCase()}`} onClick={this.closeMobileMenu}>
+    <StyledAnchorLink href={`#${ (item.toLowerCase()).replace(/ /g,'')}`} onClick={this.closeMobileMenu}>
       <span>{item}</span>
+      
     </StyledAnchorLink>
   );
 

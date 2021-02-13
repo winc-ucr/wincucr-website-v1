@@ -11,6 +11,7 @@ import Team from '@sections/Team';
 import Sponsors from '@sections/Sponsors';
 import Faq from '@sections/Faq';
 import Footer from '@sections/Footer';
+import Contact from '@sections/Contact';
 
 const IndexPage = () => (
   <Layout>
@@ -21,6 +22,7 @@ const IndexPage = () => (
     {/* <Brands /> */}
     <Team />
     <Sponsors />
+    <Contact />
     <Faq />
     <Footer />
   </Layout>

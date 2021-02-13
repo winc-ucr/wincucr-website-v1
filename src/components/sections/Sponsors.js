@@ -44,7 +44,7 @@ const Sponsors = () => (
     `}
     render={data => (
       <Section id="sponsors">
-        <Container style={{ position: 'relative' }}>
+        <Container style={{ position: 'relative'}}>
           <h1>Sponsors</h1>
           <SponsorsGrid>
             {SPONSORS.map(({logo, link}) => {
