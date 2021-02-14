@@ -13,7 +13,9 @@ const Contact = () => (
           <textarea style={styles.inputMessage}></textarea>
           <button />
       </div>
-      <button style={styles.button} onclick={()=>{console.log("submitted")}}>Submit</button>
+      <div style={styles.buttonContainer}>
+        <button style={styles.button} onclick={()=>{console.log("submitted")}}>Submit</button>
+      </div>
     </Container>
   </Section>
 );
@@ -26,7 +28,7 @@ let styles = {
     input:{
         display: 'block',
         margin:'auto',
-        width: 800,
+        width: '100%',
         height: 50,
         outline: 0,
         borderWidth: '0 0 2px',
@@ -35,7 +37,7 @@ let styles = {
 
     inputMessage:{
         marginTop: 30,
-        width: 800,
+        width: '100%',
         height: 200,
         borderWidth: '2px 2px 2px',
         borderColor:'black'
@@ -51,6 +53,11 @@ let styles = {
         margin:'auto',
         padding:10,
         backgroundColor:'#f57567',
+    },
+
+    buttonContainer:{
+      width: '100%',
+      marginTop: 10
     }
 }
 

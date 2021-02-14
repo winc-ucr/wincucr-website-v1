@@ -33,7 +33,7 @@ class Navbar extends Component {
   };
 
   getNavAnchorLink = item => (
-    <StyledAnchorLink href={`#${ (item.toLowerCase()).replace(/ /g,'')}`} onClick={this.closeMobileMenu}>
+    <StyledAnchorLink href={`#${(item.toLowerCase()).replace(/ /g,'')}`} onClick={this.closeMobileMenu}>
       <span>{item}</span>
       
     </StyledAnchorLink>
@@ -42,7 +42,7 @@ class Navbar extends Component {
   getNavList = ({ mobile = false }) => (
     <NavListWrapper mobile={mobile}>
       <Scrollspy
-        items={NAV_ITEMS.map(item => item.toLowerCase())}
+        items={NAV_ITEMS.map(item => (item.toLowerCase()).replace(/ /g,''))}
         currentClassName="active"
         mobile={mobile}
         offset={-64}
