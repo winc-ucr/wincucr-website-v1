@@ -1,0 +1,14 @@
+{
+  "name": "wincucr-backend",
+  "version": "1.0.0",
+  "description": "Backend for wincucr website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nabil Khalil",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
