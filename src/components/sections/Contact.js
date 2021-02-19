@@ -1,5 +1,6 @@
 import React from 'react';
 
+import styled from 'styled-components';
 import { Section, Container } from '@components/global';
 
 
@@ -13,12 +14,35 @@ const Contact = () => (
           <textarea style={styles.inputMessage}></textarea>
           <button />
       </div>
-      <div style={styles.buttonContainer}>
-        <button style={styles.button} onclick={()=>{console.log("submitted")}}>Submit</button>
-      </div>
+      <SubmitButtonContainer>
+        <SubmitButton onclick={()=>{console.log("submitted")}}>Submit</SubmitButton>
+      </SubmitButtonContainer>
     </Container>
   </Section>
 );
+
+const SubmitButton = styled.button`
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  color: white;
+  textAlign: center;
+  display: block;
+  margin: auto;
+  padding: 10px;
+  background-color: ${props => props.theme.color.primary};
+  transition: background-color .3s ease-in;
+`;
+
+const SubmitButtonContainer = styled.div`
+  margin-top: 10px;
+  
+  button:hover{
+    background-color:black;
+    background-color: #d16256;
+    transition: background-color .3s ease-in;
+  }
+`
 
 let styles = {
     inputContainer:{
@@ -40,25 +64,10 @@ let styles = {
         width: '100%',
         height: 200,
         borderWidth: '2px 2px 2px',
+        borderRadius: 5,
+        outline: 'none',
         borderColor:'black'
     },
-
-    button:{
-        width: 150,
-        height: 50,
-        borderRadius: 10,
-        color:'white',
-        textAlign: 'center',
-        display:'block',
-        margin:'auto',
-        padding:10,
-        backgroundColor:'#f57567',
-    },
-
-    buttonContainer:{
-      width: '100%',
-      marginTop: 10
-    }
 }
 
 export default Contact;
