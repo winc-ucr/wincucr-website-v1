@@ -11,7 +11,11 @@ class Contact extends React.Component{
     this.state = {
       email: "",
       subject:"",
-      body:""
+      body:"",
+      submission_status:{
+        error: false,
+        message:""
+      },
     }
 
     this.setEmail = this.setEmail.bind(this);
@@ -53,13 +57,28 @@ class Contact extends React.Component{
       })
     })
     .then((resp)=>{
-      return resp.json()
+      if(resp.status !== 200){
+        throw new Error(resp.json());
+      }
+
+      return resp.json();
     })
     .then((data)=>{
-      console.log(data)
+      this.setState({
+        submission_status: {
+          error: false,
+          message: data.message
+        },
+      })
     })
     .catch((error)=>{
-      console.error(error);
+      console.log(error);
+      this.setState({
+        submission_status: {
+          error: true,
+          message: "Something went wrong, try again."
+        },
+      })
     })
   }
 
@@ -75,6 +94,12 @@ class Contact extends React.Component{
             <SubmitButtonContainer>
               <SubmitButton type="submit" id="ContactSubmitButton" value="Submit"/>
             </SubmitButtonContainer>
+            <FormSubmissionStatus style = {this.state.submission_status.error ? {color:'red'}: {color:'green'}}>
+              {
+                this.state.submission_status.message != "" &&
+                <span id="ContactFormStatusMessage">{this.state.submission_status.message}</span>
+              }
+            </FormSubmissionStatus>
           </ContactForm>
         </Container>
       </Section>
@@ -82,6 +107,25 @@ class Contact extends React.Component{
   }
 };
 
+const FormSubmissionStatus = styled.div`
+  margin: 10px;
+  height: 20px;
+  text-align:center;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0%;
+    }
+    100% {
+      transform: 100%);
+    }
+  }
+
+  #ContactFormStatusMessage{
+    animation: 1s ease-out 0s 1 fadeIn;
+  }
+
+`;
 
 const SubmitButton = styled.input`
   border: 0px;

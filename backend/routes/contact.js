@@ -19,15 +19,15 @@ function addContactSubmission(auth, contactUsData){
 	let values = [
 		[
 			timestamp.toISOString(),
-			contactUsData.email,
-			contactUsData.subject,
-			contactUsData.body
+			contactUsData.data.email,
+			contactUsData.data.subject,
+			contactUsData.data.body
 		]
 	];
 	let resource = {
 		values:values,
 	};
-	
+
 	const sheets = google.sheets({version: 'v4', auth: auth});
 	sheets.spreadsheets.values.append({
 			spreadsheetId: process.env.WINCUCR_GOOGLE_SPREADSHEET_ID,
@@ -36,13 +36,12 @@ function addContactSubmission(auth, contactUsData){
 			resource:resource,
 		}, (err, res) => {
 			if (err){
-				return {
-					error: ('The API returned an error: ' + err),
-				};
+				console.error('The API returned an error: ' + err);
+				contactUsData.res.status(500).send({message:'Server Failed to Submit'})
 			}
-			return {
-				success:'Recieved Contact Form',
-			};
+			else{
+				contactUsData.res.status(200).send({message:'Recieved Contact Form'})
+			}
 		}
 	);
 }
@@ -50,22 +49,15 @@ function addContactSubmission(auth, contactUsData){
 // Endpoint Adds Contact Us Data to a Google Spreadsheet
 contactRouter.post('/', function(req, res){
 	let contactUsData = req.body;
-
 	fs.readFile(`${googleAPIPath}/credentials.json`, (err, content) => {
 		if (err) return console.log('Error loading client secret file:', err);
 		// Authorize a client with credentials, then call the Google Sheets API.
-		var clientCredentials = JSON.parse(content);
-		let contactSubmissionResp = authGoogleAPI(clientCredentials.web, addContactSubmission, contactUsData);
-		console.log(contactSubmissionResp);
-		if(!contactSubmissionResp){
-			console.log(contactSubmissionResp);
-			res.status(500).send({error: "Failed To Submit"});
+		let clientCredentials = JSON.parse(content);
+		let addContactData = {
+			res: res,
+			data: contactUsData
 		}
-		else{
-			console.log("Form Submitted Successfully!")
-			res.status(200).send(contactSubmissionResp);
-		}
-		
+		authGoogleAPI(clientCredentials.web, addContactSubmission, addContactData);
 	});
 
 });
