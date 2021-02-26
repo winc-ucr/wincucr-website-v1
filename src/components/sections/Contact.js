@@ -68,25 +68,23 @@ class Contact extends React.Component{
       <Section id="contactus">
         <Container>
           <h1 style={{ marginBottom: 40 }}>Contact Us</h1>
-          <form style={styles.inputContainer} onSubmit={this.submitContact}>
-            <input placeholder="Email" type="text" style={styles.input} value={this.state.email} onChange={this.setEmail}/>
-            <input placeholder="Subject" type="text" style={styles.input} value={this.state.subject} onChange={this.setSubject}/>
-            <textarea style={styles.inputMessage} value={this.state.body} onChange={this.setBody}></textarea>
+          <ContactForm onSubmit={this.submitContact}>
+            <ContactInput placeholder="Email" type="email" value={this.state.email} onChange={this.setEmail} required/>
+            <ContactInput placeholder="Subject" type="text" value={this.state.subject} onChange={this.setSubject} required/>
+            <ContactInputTextArea value={this.state.body} onChange={this.setBody} required></ContactInputTextArea>
             <SubmitButtonContainer>
               <SubmitButton type="submit" id="ContactSubmitButton" value="Submit"/>
             </SubmitButtonContainer>
-          </form>
+          </ContactForm>
         </Container>
       </Section>
     )
   }
-
 };
 
 
-
 const SubmitButton = styled.input`
-  border:0px;
+  border: 0px;
   width: 150px;
   height: 50px;
   border-radius: 10px;
@@ -108,32 +106,31 @@ const SubmitButtonContainer = styled.div`
     background-color: #d16256;
     transition: background-color .3s ease-in;
   }
-`
+`;
 
-let styles = {
-    inputContainer:{
-        textAlign: 'center'
-    },
+const ContactForm = styled.form`
+  textAlign: center;
+`;
 
-    input:{
-        display: 'block',
-        margin:'auto',
-        width: '100%',
-        height: 50,
-        outline: 0,
-        borderWidth: '0 0 2px',
-        borderColor:'black'
-    },
+const ContactInput = styled.input`
+  display: block;
+  margin:auto;
+  width: 100%;
+  height: 50px;
+  outline: 0;
+  border-width: 0px 0px 2px;
+  border-color: black;
+  
+`;
 
-    inputMessage:{
-        marginTop: 30,
-        width: '100%',
-        height: 200,
-        borderWidth: '2px 2px 2px',
-        borderRadius: 5,
-        outline: 'none',
-        borderColor:'black'
-    },
-}
+const ContactInputTextArea = styled.textarea`
+  margin-top: 30px;
+  width: 100%;
+  height: 200px;
+  border-width: 2px 2px 2px;
+  border-radius: 5px;
+  outline: none;
+  border-color: black;
+`;
 
 export default Contact;
