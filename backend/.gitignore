@@ -67,3 +67,7 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+#Google API Credentials
+/routes/googleAPI/credentials.json
+/routes/googleAPI/token.json

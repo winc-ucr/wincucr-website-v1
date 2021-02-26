@@ -9,6 +9,11 @@
   "author": "Nabil Khalil",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "googleapis": "^39.2.0",
+    "readline": "^1.3.0"
   }
 }
