@@ -1,27 +1,92 @@
 import React from 'react';
-
 import styled from 'styled-components';
 import { Section, Container } from '@components/global';
 
 
-const Contact = () => (
-  <Section id="contactus">
-    <Container>
-      <h1 style={{ marginBottom: 40 }}>Contact Us</h1>
-      <div style={styles.inputContainer}>
-          <input placeholder="Email" type="text" style={styles.input} />
-          <input placeholder="Subject" type="text" style={styles.input}/>
-          <textarea style={styles.inputMessage}></textarea>
-          <button />
-      </div>
-      <SubmitButtonContainer>
-        <SubmitButton onclick={()=>{console.log("submitted")}}>Submit</SubmitButton>
-      </SubmitButtonContainer>
-    </Container>
-  </Section>
-);
+class Contact extends React.Component{
 
-const SubmitButton = styled.button`
+  constructor(props){
+    super(props);
+
+    this.state = {
+      email: "",
+      subject:"",
+      body:""
+    }
+
+    this.setEmail = this.setEmail.bind(this);
+    this.setSubject = this.setSubject.bind(this);
+    this.setBody = this.setBody.bind(this);
+    this.submitContact = this.submitContact.bind(this);
+  }
+
+  setEmail(event){
+    this.setState({
+      email:event.target.value
+    })
+  }
+
+  setSubject(event){
+    this.setState({
+      subject:event.target.value
+    })
+  }
+
+  setBody(event){
+    this.setState({
+      body:event.target.value
+    })
+  }
+
+  submitContact(event){
+    event.preventDefault();
+    
+    fetch('http://localhost:3000/contact', {
+      method:'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        email: this.state.email,
+        subject: this.state.subject,
+        body: this.state.body
+      })
+    })
+    .then((resp)=>{
+      return resp.json()
+    })
+    .then((data)=>{
+      console.log(data)
+    })
+    .catch((error)=>{
+      console.error(error);
+    })
+  }
+
+  render(){
+    return(
+      <Section id="contactus">
+        <Container>
+          <h1 style={{ marginBottom: 40 }}>Contact Us</h1>
+          <form style={styles.inputContainer} onSubmit={this.submitContact}>
+            <input placeholder="Email" type="text" style={styles.input} value={this.state.email} onChange={this.setEmail}/>
+            <input placeholder="Subject" type="text" style={styles.input} value={this.state.subject} onChange={this.setSubject}/>
+            <textarea style={styles.inputMessage} value={this.state.body} onChange={this.setBody}></textarea>
+            <SubmitButtonContainer>
+              <SubmitButton type="submit" id="ContactSubmitButton" value="Submit"/>
+            </SubmitButtonContainer>
+          </form>
+        </Container>
+      </Section>
+    )
+  }
+
+};
+
+
+
+const SubmitButton = styled.input`
+  border:0px;
   width: 150px;
   height: 50px;
   border-radius: 10px;
@@ -37,7 +102,8 @@ const SubmitButton = styled.button`
 const SubmitButtonContainer = styled.div`
   margin-top: 10px;
   
-  button:hover{
+  #ContactSubmitButton:hover{
+    cursor:pointer;
     background-color:black;
     background-color: #d16256;
     transition: background-color .3s ease-in;
