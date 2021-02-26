@@ -29,12 +29,9 @@ fs.readFile(`${googleAPIPath}/credentials.json`, (err, content) => {
  * @param {Object} data Any data the client wants to pass to the callback.
  */
 function authorize(credentials, callback, data) {
-	console.log(credentials);
 	const client_secret = credentials.client_secret;
 	const client_id = credentials.client_id;
 	const redirect_uris = credentials.redirect_uris;
-	
-	console.log(redirect_uris);
 
 	const oAuth2Client = new google.auth.OAuth2(client_id, client_secret, redirect_uris[0]);
 
@@ -42,7 +39,7 @@ function authorize(credentials, callback, data) {
 	fs.readFile(TOKEN_PATH, (err, token) => {
 		if (err) return getNewToken(oAuth2Client, callback);
 		oAuth2Client.setCredentials(JSON.parse(token));
-		callback(oAuth2Client, data);
+		return callback(oAuth2Client, data);
 	});
 }
 
@@ -73,7 +70,7 @@ function getNewToken(oAuth2Client, callback, data) {
         if (err) return console.error(err);
         console.log('Token stored to', TOKEN_PATH);
       });
-      callback(oAuth2Client, data);
+      return callback(oAuth2Client, data);
     });
   });
 }
