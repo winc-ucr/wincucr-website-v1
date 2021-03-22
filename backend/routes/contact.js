@@ -11,9 +11,10 @@ const googleAPIPath = './routes/googleAPI';
  * @param {google.auth.OAuth2} auth The authenticated Google OAuth client.
  * @param {Object} contactUsData Holds data from Contact Us Form
  */
+
 function addContactSubmission(auth, contactUsData){
 	console.log("Recieved Contact Form:");
-	console.log(contactUsData);
+	console.log(contactUsData.data);
 
 	let timestamp = new Date(Date.now());
 	let values = [
@@ -24,6 +25,7 @@ function addContactSubmission(auth, contactUsData){
 			contactUsData.data.body
 		]
 	];
+	
 	let resource = {
 		values:values,
 	};
@@ -40,6 +42,7 @@ function addContactSubmission(auth, contactUsData){
 				contactUsData.res.status(500).send({message:'Server Failed to Submit'})
 			}
 			else{
+				console.log("Contact Form Successfully Submitted")
 				contactUsData.res.status(200).send({message:'Recieved Contact Form'})
 			}
 		}

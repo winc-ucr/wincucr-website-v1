@@ -57,10 +57,12 @@ class Contact extends React.Component{
       })
     })
     .then((resp)=>{
-      if(resp.status !== 200){
-        throw new Error(resp.json());
+      if(resp.status == 429){
+        throw new Error('Too many requests made! Try again later.');
       }
-
+      else if(resp.status != 200){
+        throw new Error('Something went wrong, try again.');
+      }
       return resp.json();
     })
     .then((data)=>{
@@ -72,11 +74,11 @@ class Contact extends React.Component{
       })
     })
     .catch((error)=>{
-      console.log(error);
+      console.error(error);
       this.setState({
         submission_status: {
           error: true,
-          message: "Something went wrong, try again."
+          message: error.message
         },
       })
     })
@@ -96,7 +98,7 @@ class Contact extends React.Component{
             </SubmitButtonContainer>
             <FormSubmissionStatus style = {this.state.submission_status.error ? {color:'red'}: {color:'green'}}>
               {
-                this.state.submission_status.message != "" &&
+                this.state.submission_status.message !== "" &&
                 <span id="ContactFormStatusMessage">{this.state.submission_status.message}</span>
               }
             </FormSubmissionStatus>
