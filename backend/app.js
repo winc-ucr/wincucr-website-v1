@@ -17,7 +17,8 @@ app.use(helmet());
 //Enables cross origin access
 
 app.use(cors({
-  origin: 'https://winc.cs.ucr.edu/'
+  origin: 'https://winc.cs.ucr.edu/',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }));
 
 
