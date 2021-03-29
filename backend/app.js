@@ -1,8 +1,10 @@
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const express = require('express');
-const app = express();
+const helmet = require("helmet");
 const rateLimit = require("express-rate-limit");
+
+const app = express();
 const port = 3000;
 
 // Middleware:
@@ -10,6 +12,8 @@ const port = 3000;
 app.use(bodyParser.urlencoded({ extended: true }))
 // parse application/json
 app.use(bodyParser.json())
+// Sets http headers for extra security
+app.use(helmet());
 //Enables cross origin access
 app.use(cors());
 
@@ -19,7 +23,7 @@ app.use(cors());
 // app.set('trust proxy', 1);
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 10 // limit each IP to 100 requests per windowMs
+  max: 10 // limit each IP to 10 requests per windowMs
 });
 
 //  apply to all requests
