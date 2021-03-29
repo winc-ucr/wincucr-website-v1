@@ -15,7 +15,10 @@ app.use(bodyParser.json())
 // Sets http headers for extra security
 app.use(helmet());
 //Enables cross origin access
-app.use(cors());
+
+app.use(cors({
+  origin: 'https://winc.cs.ucr.edu/'
+}));
 
 
 // Enable if you're behind a reverse proxy (Heroku, Bluemix, AWS ELB, Nginx, etc)
