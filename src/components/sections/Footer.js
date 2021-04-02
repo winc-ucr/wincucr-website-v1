@@ -79,15 +79,19 @@ const Footer = () => (
                 Email us
                 {` `}
                 <ExternalLink href="mailto:wincucr@gmail.com">
-                  wincucr@gmail.com
+                  <Email>
+                    wincucr@gmail.com
+                  </Email>
                 </ExternalLink>
               </span>
             </Copyright>
             <SocialIcons>
               {SOCIAL.map(({ icon, link }) => (
-                <ExternalLink key={link} href={link}>
-                  <img src={icon} alt="link" />
-                </ExternalLink>
+                <SocialIcon>
+                  <ExternalLink key={link} href={link}>
+                    <img src={icon} alt="link" />
+                  </ExternalLink>
+                </SocialIcon>
               ))}
             </SocialIcons>
           </StyledContainer>
@@ -108,6 +112,26 @@ const SocialIcons = styled.div`
 
   @media (max-width: ${props => props.theme.screen.md}) {
     margin-top: 40px;
+  }
+`;
+
+const SocialIcon = styled.div`
+  filter: invert(0);
+  transition: filter .3s;
+
+  :hover {
+    filter: invert(1);
+    transition: filter .4s ease-in;
+  }
+`;
+
+const Email = styled.span`
+  filter: invert(0);
+  transition: filter .3s;
+
+  :hover {
+    filter: invert(1);
+    transition: filter .4s ease-in;
   }
 `;
 

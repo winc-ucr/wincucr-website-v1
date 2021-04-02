@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import Fade from 'react-reveal/Fade';
+
 
 import { Section, Container } from '@components/global';
 
@@ -46,33 +48,37 @@ const About = () => (
     render={data => (
       <Section id="about">
         <Container>
-          <h1> About</h1>
-          <Grid>
-            <div>
-              <h2>Empowering Women in Tech</h2>
-              <p>
-                We're dedicated to empowering and supporting a network of leading women in tech 
-                at the University of California, Riverside. We're UCR Women in Computing.
-              </p>
-            </div>
-            <Art>
-              <Img fluid={data.art_fast.childImageSharp.fluid} />
-            </Art>
-          </Grid>
-          <Grid inverse>
-            <Art>
-              <Img fluid={data.art_learn.childImageSharp.fluid} />
-            </Art>
-            <div>
-              <h2>Grow and thrive - academically, professionally, and personally.</h2>
-              <p> 
-              From mentorship, professional development workshops, and social events, 
-              we aim to offer all the opportunities and resources necessary for success within our 
-              incredible and diverse community of women technologists here at the 
-              University of California, Riverside.
-              </p>
-            </div>
-          </Grid>
+        <Fade>
+            <h1> About</h1>
+            <Grid>
+              <div>
+                <h2>Empowering Women in Tech</h2>
+                <p>
+                  We're dedicated to empowering and supporting a network of leading women in tech 
+                  at the University of California, Riverside. We're UCR Women in Computing.
+                </p>
+              </div>
+              <Art>
+                <Img fluid={data.art_fast.childImageSharp.fluid} />
+              </Art>
+            </Grid>
+          </Fade>
+          <Fade>
+            <Grid inverse>
+              <Art>
+                <Img fluid={data.art_learn.childImageSharp.fluid} />
+              </Art>
+              <div>
+                <h2>Grow and thrive - academically, professionally, and personally.</h2>
+                <p> 
+                From mentorship, professional development workshops, and social events, 
+                we aim to offer all the opportunities and resources necessary for success within our 
+                incredible and diverse community of women technologists here at the 
+                University of California, Riverside.
+                </p>
+              </div>
+            </Grid>
+          </Fade>
           {/* <Grid>
             <div>
               <h2>Grow and build your ideas</h2>

@@ -25,6 +25,7 @@
     "react-collapsible": "^2.6.0",
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
+    "react-reveal": "^1.2.2",
     "react-scrollspy": "^3.3.5",
     "styled-components": "^4.1.3"
   },

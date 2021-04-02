@@ -5,6 +5,10 @@ import Img from 'gatsby-image';
 
 import { Section, Container } from '@components/global';
 
+import Flip from 'react-reveal/Flip';
+
+let team_count = 0;
+
 const TEAM = [
   {
     name: 'Anchita Bora',
@@ -113,19 +117,23 @@ const Team = () => (
         <Container style={{ position: 'relative' }}>
           <h1>The Team</h1>
           <TeamGrid>
-            {TEAM.map(({ name, image, role }) => {
-              const img = data.allFile.edges.find(
-                ({ node }) => node.relativePath === image
-              ).node;
-
-              return (
-                <div key={name}>
-                  <Img fluid={img.childImageSharp.fluid} alt={name} />
-                  <Title>{name}</Title>
-                  <Subtitle>{role}</Subtitle>
-                </div>
-              );
-            })}
+            {
+              TEAM.map(({ name, image, role }) => {
+                const img = data.allFile.edges.find(
+                  ({ node }) => node.relativePath === image
+                ).node;
+                team_count++;
+                return (
+                  <Flip left>
+                    <div key={name}>
+                      <Img fluid={img.childImageSharp.fluid} alt={name} />
+                      <Title>{name}</Title>
+                      <Subtitle>{role}</Subtitle>
+                    </div>
+                  </Flip>
+                );
+              })
+            }
           </TeamGrid>
           <Art>
             <Img fluid={data.art_team.childImageSharp.fluid} />
