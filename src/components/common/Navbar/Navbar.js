@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Scrollspy from 'react-scrollspy';
+import Scrollspy from 'react-scrollspy'; 
 
 import { Container } from '@components/global';
 import {
@@ -15,7 +15,7 @@ import {
 
 import { ReactComponent as MenuIcon } from '@static/icons/menu.svg';
 
-const NAV_ITEMS = ['About', 'Programs', 'Team', 'Sponsors', 'Contact Us','FAQ',];
+const NAV_ITEMS = ['About', 'Programs', 'Team', 'Sponsors','FAQ',];
 
 class Navbar extends Component {
   state = {
@@ -71,7 +71,7 @@ class Navbar extends Component {
         </StyledContainer>
         <Mobile>
           {mobileMenuOpen && (
-            <MobileMenu>
+            <MobileMenu open={mobileMenuOpen}>
               <Container>{this.getNavList({ mobile: true })}</Container>
             </MobileMenu>
           )}

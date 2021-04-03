@@ -5,6 +5,8 @@ import Img from 'gatsby-image';
 
 import { Container } from '@components/global';
 import ExternalLink from '@common/ExternalLink';
+import Flip from 'react-reveal/Flip';
+
 
 const Header = () => (
   <StaticQuery
@@ -16,7 +18,7 @@ const Header = () => (
         ) {
           childImageSharp {
             fluid(maxWidth: 1400) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+               ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
         }
@@ -31,16 +33,22 @@ const Header = () => (
             </Art>
             <Text>
               <h1>
-                UCR
-                <br />
-                Women in
-                <br />
-                Computing
+                <Flip duration={2000} left cascade>
+                  UCR
+                </Flip>
+                <Flip duration={2000} left cascade>
+                  Women in
+                </Flip>
+                <Flip duration={2000} left cascade>
+                  Computing
+                </Flip>
               </h1>
               <br />
               <p>
                 <StyledExternalLink href="https://twitter.com/wincucr">
-                  Chat with us &nbsp;&#x2794;
+                  <Flip duration={2000} left cascade>
+                    Chat with us &nbsp;&#x2794;
+                  </Flip>
                 </StyledExternalLink>
               </p>
             </Text>

@@ -5,10 +5,6 @@ import Img from 'gatsby-image';
 
 import { Section, Container } from '@components/global';
 
-import Flip from 'react-reveal/Flip';
-
-let team_count = 0;
-
 const TEAM = [
   {
     name: 'Anchita Bora',
@@ -81,7 +77,6 @@ const TEAM = [
     role: 'Graduate Outreach',
   },
   
-  
 ];
 
 const Team = () => (
@@ -122,15 +117,12 @@ const Team = () => (
                 const img = data.allFile.edges.find(
                   ({ node }) => node.relativePath === image
                 ).node;
-                team_count++;
                 return (
-                  <Flip left>
-                    <div key={name}>
-                      <Img fluid={img.childImageSharp.fluid} alt={name} />
-                      <Title>{name}</Title>
-                      <Subtitle>{role}</Subtitle>
-                    </div>
-                  </Flip>
+                  <div key={name}>
+                    <Img fluid={img.childImageSharp.fluid} alt={name} />
+                    <Title>{name}</Title>
+                    <Subtitle>{role}</Subtitle>
+                  </div>
                 );
               })
             }
