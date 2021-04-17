@@ -53,7 +53,7 @@ const Sponsors = () => (
               ).node;
 
               return (
-                <div>
+                <div key={link}>
                   <ExternalLink key={link} href={link}>
                     <Img fluid={img.childImageSharp.fluid}/>
                   </ExternalLink>

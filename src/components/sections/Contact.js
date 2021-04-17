@@ -57,10 +57,10 @@ class Contact extends React.Component{
       })
     })
     .then((resp)=>{
-      if(resp.status == 429){
+      if(resp.status === 429){
         throw new Error('Too many requests made! Try again later.');
       }
-      else if(resp.status != 200){
+      else if(resp.status !== 200){
         throw new Error('Something went wrong, try again.');
       }
       return resp.json();

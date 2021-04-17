@@ -87,7 +87,7 @@ const Footer = () => (
             </Copyright>
             <SocialIcons>
               {SOCIAL.map(({ icon, link }) => (
-                <SocialIcon>
+                <SocialIcon key={link}>
                   <ExternalLink key={link} href={link}>
                     <img src={icon} alt="link" />
                   </ExternalLink>
